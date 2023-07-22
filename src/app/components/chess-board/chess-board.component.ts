@@ -9,7 +9,7 @@ import {CommonModule} from '@angular/common';
     styleUrls: ['./chess-board.component.scss'],
 })
 export class ChessBoardComponent {
-    public clickSquare(_id: any): void {
-        console.log(_id);
+    public clickSquare(e: any): void {
+        console.log(e.target.id);
     }
 }
