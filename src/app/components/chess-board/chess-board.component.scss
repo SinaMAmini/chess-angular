@@ -1,4 +1,5 @@
-td > div {
+.light-square,
+.dark-square {
     width: 10rem;
     height: 10rem;
 }
@@ -13,10 +14,10 @@ td {
     border: none;
 }
 
-.Light_Square {
+.light-square {
     background-color: hsl(300, 24%, 80%);
 }
 
-.Dark_Square {
+.dark-square {
     background-color: hsl(120, 100%, 25%);
 }
