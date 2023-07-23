@@ -1,7 +1,7 @@
 .light-square,
 .dark-square {
-    width: 10rem;
-    height: 10rem;
+    inline-size: 10rem;
+    block-size: 10rem;
 }
 
 table {
@@ -12,6 +12,11 @@ table,
 th,
 td {
     border: none;
+
+    img {
+        block-size: 100%;
+        inline-size: 100%;
+    }
 }
 
 .light-square {

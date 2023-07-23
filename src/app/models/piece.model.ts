@@ -5,4 +5,6 @@ export interface PieceModel {
     chessPiece: ChessPieces;
     color: Color;
     point: number;
+    url: string;
+    alt: string;
 }
