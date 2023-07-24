@@ -4,13 +4,12 @@ import {GameService} from '../../services/game.service';
 
 @Component({
     selector: 'app-chess-board',
-    standalone: true,
-    imports: [CommonModule, NgOptimizedImage],
     templateUrl: './chess-board.component.html',
     styleUrls: ['./chess-board.component.scss'],
 })
 export class ChessBoardComponent implements AfterViewInit {
     @ViewChild('board') private boardTable?: ElementRef<HTMLTableElement>;
+
     public constructor(
         private renderer: Renderer2,
         private gameService: GameService
@@ -28,5 +27,8 @@ export class ChessBoardComponent implements AfterViewInit {
             }
         }
     }
-    public clickSquare(e: any): void {}
+
+    public clickSquare(e: Event): void {
+        console.log(e);
+    }
 }

@@ -30,4 +30,7 @@ export class GameService {
         [WhiteRook, WhiteKnight, WhiteBishop, WhiteQueen, WhiteKing, WhiteBishop, WhiteKnight, WhiteRook],
     ];
     private constructor() {}
+
+    public originSquare: string | null = null;
+    public destinationSquare: string | null = null;
 }
