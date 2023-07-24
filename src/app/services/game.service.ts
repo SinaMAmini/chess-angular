@@ -14,6 +14,8 @@ import {
     WhiteQueen,
     WhiteRook,
 } from '../utls/pieces';
+import {SquareModel} from '../models/square.model';
+import {MoveModel} from '../models/move.model';
 
 @Injectable({
     providedIn: 'root',
@@ -29,8 +31,26 @@ export class GameService {
         [WhitePawn, WhitePawn, WhitePawn, WhitePawn, WhitePawn, WhitePawn, WhitePawn, WhitePawn],
         [WhiteRook, WhiteKnight, WhiteBishop, WhiteQueen, WhiteKing, WhiteBishop, WhiteKnight, WhiteRook],
     ];
-    private constructor() {}
 
     public originSquare: string | null = null;
     public destinationSquare: string | null = null;
+
+    public move(_origin: SquareModel, _destination: SquareModel): void {
+        const newMove: MoveModel = {
+            origin: _origin,
+            destination: _destination,
+        };
+
+        this.originSquare = null;
+        this.destinationSquare = null;
+
+        console.log(newMove);
+
+        if (this.isMoveValid(newMove)) {
+        }
+    }
+
+    public isMoveValid(_move: MoveModel): boolean {
+        return false;
+    }
 }
