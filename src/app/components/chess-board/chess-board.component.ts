@@ -16,13 +16,14 @@ export class ChessBoardComponent implements AfterViewInit {
     ) {}
 
     public ngAfterViewInit(): void {
-        for (let i = 7; i >= 0; i--) {
+        for (let i = 7, k = 0; i >= 0; i--, k++) {
             for (let j = 0; j < 8; j++) {
+                console.log(JSON.parse(JSON.stringify(this.gameService.chessBoard[i][j])));
                 if (!!this.gameService.chessBoard[i][j]) {
                     const img = this.renderer.createElement('img');
                     this.renderer.setProperty(img, 'src', this.gameService.chessBoard[i][j]?.url);
                     this.renderer.setProperty(img, 'alt', this.gameService.chessBoard[i][j]?.alt);
-                    this.renderer.appendChild(this.boardTable?.nativeElement.children[i].children[j].children[0], img);
+                    this.renderer.appendChild(this.boardTable?.nativeElement.children[k].children[j].children[0], img);
                 }
             }
         }
