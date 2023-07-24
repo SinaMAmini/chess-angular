@@ -21,13 +21,16 @@ export class DragNDropDirective {
             this.gameService.destinationSquare = e.target.id;
         }
 
-        // this.gameService.move()
         if (!!this.gameService.originSquare && !!this.gameService.destinationSquare) {
-            SquareIfOnlyAndOnlyStringService.stringToSquare(this.gameService.originSquare);
             this.gameService.move(
                 SquareIfOnlyAndOnlyStringService.stringToSquare(this.gameService.originSquare),
                 SquareIfOnlyAndOnlyStringService.stringToSquare(this.gameService.destinationSquare)
             );
         }
     }
+    // @HostListener('mouseover', ['$event']) private dragOver(e: any): void {
+    //     if (!!this.gameService.originSquare) {
+    //         console.log(e.target.src);
+    //     }
+    // }
 }

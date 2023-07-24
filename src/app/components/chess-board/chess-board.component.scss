@@ -1,3 +1,8 @@
+:root {
+    --inline-start: 0rem;
+    --block-start: 0rem;
+}
+
 .light-square,
 .dark-square {
     inline-size: 10rem;
@@ -26,3 +31,12 @@ td {
 .dark-square {
     background-color: hsl(120, 100%, 25%);
 }
+
+//.dragging-piece {
+//    inline-size: 10rem;
+//    block-size: 10rem;
+//    opacity: 0.5;
+//    position: fixed;
+//    inset-inline-start: var(--inline-start);
+//    inset-block-start: var(--block-start);
+//}
